@@ -7,6 +7,10 @@
 //
 
 #import "AppDelegate.h"
+#import <JSPatchPlatform/JSPatch.h>
+
+NSString *const JPatchAppKey = @"59d198781938295f";
+NSString *const JPatchRSAPublicKey = @"-----BEGIN PUBLIC KEY-----\nMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDSGge71bOb+nlTwUgiHMJN8Aki\nTOy+mBULlVi70jKkO20+PNUp1zlkzAPHkgqHeWH8jLGYVUPbhpcrTVad9eHhouik\nBDRvRNCgdS75wDimBQYUJj8fOneqE2d7oc5ODp1B8NS0O+TZK2kO+tm1gw8+/9xP\nsw4C7/YZka+gbilFeQIDAQAB\n-----END PUBLIC KEY-----";
 
 @interface AppDelegate ()
 
@@ -16,7 +20,11 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    [JSPatch startWithAppKey:JPatchAppKey];
+    [JSPatch setupRSAPublicKey:JPatchRSAPublicKey];
+    [JSPatch sync];
+    
     return YES;
 }
 
