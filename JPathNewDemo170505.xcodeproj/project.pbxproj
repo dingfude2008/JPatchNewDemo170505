@@ -71,6 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				AD8194611EBC2891006097CE /* JPathNewDemo170505.entitlements */,
+				AD8194651EBC4717006097CE /* JS */,
 				AD8194421EBC0A29006097CE /* AppDelegate.h */,
 				AD8194431EBC0A29006097CE /* AppDelegate.m */,
 				AD8194451EBC0A29006097CE /* ViewController.h */,
@@ -99,6 +100,13 @@
 				AD81945D1EBC287E006097CE /* libz.tbd */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AD8194651EBC4717006097CE /* JS */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = JS;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
